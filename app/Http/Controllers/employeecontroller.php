@@ -10,8 +10,8 @@ class employeecontroller extends Controller
 {
     public function index()
     {   
-
-        return view ('employee.index');
+        $employees = employee::get();
+        return view ('employee.index', compact('employees'));
     }
 
     public function create()
